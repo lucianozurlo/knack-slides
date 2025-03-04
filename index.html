@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Slides escalables</title>
+    <style>
+        /* Reiniciamos márgenes y definimos un fondo */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #eee;
+        }
+
+        /* Cada slide-wrapper contendrá el slide escalado y 
+       tendrá su altura actualizada dinámicamente */
+        .slide-wrapper {
+            margin: 20px auto;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* El slide base tiene tamaño 1920x1080 y posicionamiento relativo
+       para ubicar elementos de forma absoluta dentro */
+        .slide {
+            width: 1920px;
+            height: 1080px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Slide 1 -->
+    <div class="slide-wrapper">
+        <div class="slide">
+            <h1 style="position:absolute; top:50px; left:50px;">Slide 1</h1>
+            <p style="position:absolute; top:150px; left:50px;">Contenido del slide 1</p>
+        </div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="slide-wrapper">
+        <div class="slide">
+            <h1 style="position:absolute; top:50px; left:50px;">Slide 2</h1>
+            <p style="position:absolute; top:150px; left:50px;">Contenido del slide 2</p>
+        </div>
+    </div>
+    <!-- Puedes agregar más slides de la misma forma -->
+
+    <script>
+        function scaleSlides() {
+            // Calcula el factor de escala:
+            // Si el ancho del viewport es menor a 1920, se escala proporcionalmente;
+            // de lo contrario, se usa 1 (tamaño máximo).
+            const scaleFactor = Math.min(1, window.innerWidth / 1920);
+
+            // Aplicar escala a cada slide
+            document.querySelectorAll('.slide').forEach(slide => {
+                slide.style.transform = 'scale(' + scaleFactor + ')';
+                slide.style.transformOrigin = 'top left'; // Escalar desde la esquina superior izquierda
+            });
+
+            // Ajustar la altura del contenedor según la escala para que el layout se mantenga
+            document.querySelectorAll('.slide-wrapper').forEach(wrapper => {
+                wrapper.style.height = (1080 * scaleFactor) + 'px';
+            });
+        }
+
+        // Escalar al cargar la página
+        scaleSlides();
+
+        // Recalcular escala en cada cambio del tamaño de la ventana
+        window.addEventListener('resize', scaleSlides);
+    </script>
+</body>
+
+</html>
