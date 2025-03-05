@@ -1,91 +1,94 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Slides escalables con botón flotante</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCR Latam - Template Coca Cola</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-    <!-- Botón flotante para activar/desactivar fondos -->
-    <button id="toggleBtn" class="toggle-button">Desactivar fondos</button>
+    <!-- <button id="toggleBtn" class="toggle-button">Ver base PPT</button> -->
 
     <div class="slides-container">
+
         <!-- Slide 1 -->
         <div class="slide-wrapper">
             <div class="slide" id="slide1">
-                <img src="img/coca-cola-logo.svg" class="logo-coca-cola" alt="">
+                <img src="assets/img/coca-cola-logo.svg" class="logo-coca-cola" alt="">
                 <div class="TCR">
                     <h4>Technical Consumer Research<br />LATAM</h4>
+                    <img src="assets/img/tcr-map.svg" alt="">
                     <div class="grad-op"></div>
                 </div>
+                <div class="project-info">
+                    <h1>PROJECT NAME</h1>
+                    <table>
+                        <tr>
+                            <td>TCR Partner:</td>
+                            <td>XX</td>
+                        </tr>
+                        <tr>
+                            <td>PD Partner:</td>
+                            <td>XX</td>
+                        </tr>
+                        <tr>
+                            <td>Category:</td>
+                            <td>XX</td>
+                        </tr>
+                        <tr>
+                            <td>Human Insights Partner:</td>
+                            <td>XX</td>
+                        </tr>
+                        <tr>
+                            <td>Date:</td>
+                            <td>XX</td>
+                        </tr>
+                        <tr>
+                            <td>Test type:</td>
+                            <td>XX</td>
+                        </tr>
+                        <tr>
+                            <td>INV Number:</td>
+                            <td>XX</td>
+                        </tr>
+                        <tr>
+                            <td>Supplier:</td>
+                            <td>XX</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <footer>
+                    <p class="inv">INV Number: INVXXXXXXX</p>
+                    <p class="classified">Classified - Confidential</p>
+                    <p class="pagination">1</p>
+                    <div class="grad"></div>
+                </footer>
+
             </div>
         </div>
+
         <!-- Slide 2 -->
         <div class="slide-wrapper">
             <div class="slide" id="slide2"></div>
         </div>
+
         <!-- Slide 3 -->
         <div class="slide-wrapper">
             <div class="slide" id="slide3"></div>
         </div>
+
         <!-- Slide 4 -->
         <div class="slide-wrapper">
             <div class="slide" id="slide4"></div>
         </div>
+
     </div>
 
-    <script>
-        // Definición de las imágenes de fondo para cada slide
-        const backgrounds = {
-            slide1: "url('img-slides/slide1.png')",
-            slide2: "url('img-slides/slide2.png')",
-            slide3: "url('img-slides/slide3.png')",
-            slide4: "url('img-slides/slide4.png')"
-        };
-
-        // Función para aplicar o quitar los fondos
-        function setBackgrounds(enabled) {
-            for (const slideId in backgrounds) {
-                const slideElement = document.getElementById(slideId);
-                slideElement.style.backgroundImage = enabled ? backgrounds[slideId] : 'none';
-            }
-        }
-
-        // Estado inicial: fondos activados
-        let fondosActivos = true;
-        setBackgrounds(fondosActivos);
-
-        // Función que alterna (toggle) los fondos y actualiza el texto del botón
-        function toggleBackgrounds() {
-            fondosActivos = !fondosActivos;
-            setBackgrounds(fondosActivos);
-            document.getElementById('toggleBtn').textContent = fondosActivos ? 'Desactivar fondos' : 'Activar fondos';
-        }
-
-        // Escalado dinámico de slides según el ancho del viewport
-        function scaleSlides() {
-            // Calcula el factor de escala basado en el ancho del viewport
-            const scaleFactor = Math.min(1, window.innerWidth / 1920);
-            document.querySelectorAll('.slide').forEach(slide => {
-                slide.style.transform = `scale(${scaleFactor})`;
-            });
-            // Ajusta el tamaño de cada contenedor para mantener el layout vertical
-            document.querySelectorAll('.slide-wrapper').forEach(wrapper => {
-                wrapper.style.width = (1920 * scaleFactor) + 'px';
-                wrapper.style.height = (1080 * scaleFactor) + 'px';
-            });
-        }
-
-        // Event listeners para escalado y botón
-        window.addEventListener('load', scaleSlides);
-        window.addEventListener('resize', scaleSlides);
-        document.getElementById('toggleBtn').addEventListener('click', toggleBackgrounds);
-    </script>
+    <script src="assets/js/scripts.js"></script>
 </body>
 
 </html>
