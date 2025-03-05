@@ -1,0 +1,71 @@
+/* Estilos básicos */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+}
+
+/* Botón flotante para alternar fondos */
+.toggle-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Contenedor vertical de slides, centrados horizontalmente */
+.slides-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Cada contenedor de slide */
+.slide-wrapper {
+    margin: 20px 0;
+    /* Separación vertical entre slides */
+    overflow: hidden;
+}
+
+/* Slide base de 1920x1080 */
+.slide {
+    width: 1920px;
+    height: 1080px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    /* Color de fondo por defecto */
+    transform-origin: top left;
+    /* Punto de referencia para la escala */
+}
+
+.slides-container .slide-wrapper .slide>* {
+    position: absolute;
+}
+
+.grad {
+    background: linear-gradient(90deg, #f40009 0%, #f79900 50%, #6ac9ce 100%);
+}
+
+.grad-op {
+    background: linear-gradient(90deg, #f4000900 0%, #f40009 20%, #f79900 60%, #6ac9ce 80%, #6ac9ce00 100%);
+}
+
+/* Slide 1 */
+.logo-coca-cola {
+    width: 10.9%;
+    left: 4.65%;
+    top: 8.25%;
+}
+
+.TCR {
+    text-align: center;
+}

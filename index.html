@@ -3,76 +3,88 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Slides escalables</title>
+    <title>Slides escalables con botón flotante</title>
+    <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Reiniciamos márgenes y definimos un fondo */
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #eee;
-        }
-
-        /* Cada slide-wrapper contendrá el slide escalado y 
-       tendrá su altura actualizada dinámicamente */
-        .slide-wrapper {
-            margin: 20px auto;
-            overflow: hidden;
-            text-align: center;
-        }
-
-        /* El slide base tiene tamaño 1920x1080 y posicionamiento relativo
-       para ubicar elementos de forma absoluta dentro */
-        .slide {
-            width: 1920px;
-            height: 1080px;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            position: relative;
-        }
     </style>
 </head>
 
 <body>
-    <!-- Slide 1 -->
-    <div class="slide-wrapper">
-        <div class="slide">
-            <h1 style="position:absolute; top:50px; left:50px;">Slide 1</h1>
-            <p style="position:absolute; top:150px; left:50px;">Contenido del slide 1</p>
+
+    <!-- Botón flotante para activar/desactivar fondos -->
+    <button id="toggleBtn" class="toggle-button">Desactivar fondos</button>
+
+    <div class="slides-container">
+        <!-- Slide 1 -->
+        <div class="slide-wrapper">
+            <div class="slide" id="slide1">
+                <img src="img/coca-cola-logo.svg" class="logo-coca-cola" alt="">
+                <div class="TCR">
+                    <h4>Technical Consumer Research<br />LATAM</h4>
+                    <div class="grad-op"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="slide-wrapper">
+            <div class="slide" id="slide2"></div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="slide-wrapper">
+            <div class="slide" id="slide3"></div>
+        </div>
+        <!-- Slide 4 -->
+        <div class="slide-wrapper">
+            <div class="slide" id="slide4"></div>
         </div>
     </div>
-    <!-- Slide 2 -->
-    <div class="slide-wrapper">
-        <div class="slide">
-            <h1 style="position:absolute; top:50px; left:50px;">Slide 2</h1>
-            <p style="position:absolute; top:150px; left:50px;">Contenido del slide 2</p>
-        </div>
-    </div>
-    <!-- Puedes agregar más slides de la misma forma -->
 
     <script>
+        // Definición de las imágenes de fondo para cada slide
+        const backgrounds = {
+            slide1: "url('img-slides/slide1.png')",
+            slide2: "url('img-slides/slide2.png')",
+            slide3: "url('img-slides/slide3.png')",
+            slide4: "url('img-slides/slide4.png')"
+        };
+
+        // Función para aplicar o quitar los fondos
+        function setBackgrounds(enabled) {
+            for (const slideId in backgrounds) {
+                const slideElement = document.getElementById(slideId);
+                slideElement.style.backgroundImage = enabled ? backgrounds[slideId] : 'none';
+            }
+        }
+
+        // Estado inicial: fondos activados
+        let fondosActivos = true;
+        setBackgrounds(fondosActivos);
+
+        // Función que alterna (toggle) los fondos y actualiza el texto del botón
+        function toggleBackgrounds() {
+            fondosActivos = !fondosActivos;
+            setBackgrounds(fondosActivos);
+            document.getElementById('toggleBtn').textContent = fondosActivos ? 'Desactivar fondos' : 'Activar fondos';
+        }
+
+        // Escalado dinámico de slides según el ancho del viewport
         function scaleSlides() {
-            // Calcula el factor de escala:
-            // Si el ancho del viewport es menor a 1920, se escala proporcionalmente;
-            // de lo contrario, se usa 1 (tamaño máximo).
+            // Calcula el factor de escala basado en el ancho del viewport
             const scaleFactor = Math.min(1, window.innerWidth / 1920);
-
-            // Aplicar escala a cada slide
             document.querySelectorAll('.slide').forEach(slide => {
-                slide.style.transform = 'scale(' + scaleFactor + ')';
-                slide.style.transformOrigin = 'top left'; // Escalar desde la esquina superior izquierda
+                slide.style.transform = `scale(${scaleFactor})`;
             });
-
-            // Ajustar la altura del contenedor según la escala para que el layout se mantenga
+            // Ajusta el tamaño de cada contenedor para mantener el layout vertical
             document.querySelectorAll('.slide-wrapper').forEach(wrapper => {
+                wrapper.style.width = (1920 * scaleFactor) + 'px';
                 wrapper.style.height = (1080 * scaleFactor) + 'px';
             });
         }
 
-        // Escalar al cargar la página
-        scaleSlides();
-
-        // Recalcular escala en cada cambio del tamaño de la ventana
+        // Event listeners para escalado y botón
+        window.addEventListener('load', scaleSlides);
         window.addEventListener('resize', scaleSlides);
+        document.getElementById('toggleBtn').addEventListener('click', toggleBackgrounds);
     </script>
 </body>
 
