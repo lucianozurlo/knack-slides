@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Coca Cola</title>
+    <link rel="stylesheet" href="assets/css/coca-cola.css">
+    <link rel="stylesheet" href="assets/css/pdf.css">
+</head>
+
+<body>
+    <button id="generate-pdf-btn">Generar PDF</button>
+
+    <div class="slides-container">
+
+        <!-- Slide 1 -->
+        <div class="slide-wrapper">
+            <div class="slide" id="slideFirst">
+                <img src="assets/img/coca-cola-logo.png" class="logo-coca-cola" alt="">
+                <div class="TCR">
+                    <h4>Technical Consumer Research<br />LATAM</h4>
+                    <img src="assets/img/tcr-map.png" alt="">
+                    <div class="grad-op"></div>
+                </div>
+                <div class="project-info">
+                    <h1>PROJECT NAME</h1>
+                    <table>
+                        <tr>
+                            <td>TCR Partner:</td>
+                            <td>XX</td>
+                        </tr>
+                        <tr>
+                            <td>PD Partner:</td>
+                            <td>XX</td>
+                        </tr>
+                        <tr>
+                            <td>Category:</td>
+                            <td>XX</td>
+                        </tr>
+                        <tr>
+                            <td>Human Insights Partner:</td>
+                            <td>XX</td>
+                        </tr>
+                        <tr>
+                            <td>Date:</td>
+                            <td>XX</td>
+                        </tr>
+                        <tr>
+                            <td>Test type:</td>
+                            <td>XX</td>
+                        </tr>
+                        <tr>
+                            <td>INV Number:</td>
+                            <td>XX</td>
+                        </tr>
+                        <tr>
+                            <td>Supplier:</td>
+                            <td>XX</td>
+                        </tr>
+                    </table>
+                </div>
+                <footer>
+                    <p class="inv">INV Number: INVXXXXXXX</p>
+                    <p class="classified">Classified - Confidential</p>
+                    <div class="grad"></div>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Slide Cover -->
+        <div class="slide-wrapper">
+            <div class="slide" id="slideCover">
+                <div class="cover grad">
+                    <img src="assets/img/coca-cola-logo-blanco.png" class="logo-coca-cola" alt="">
+                    <div class="cover-content">
+                        <h1>DETAILED FINDINGS</h1>
+                        <p>Key Metrics Results, attributes comparison analysis, Brand/market related measures.</p>
+                    </div>
+                </div>
+                <footer>
+                    <p class="classified">Classified - Confidential</p>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Slide Content -->
+        <div class="slide-wrapper">
+            <div class="slide" id="slideContent">
+                <div class="main-content">
+                    <header>
+                        <h1>EXECUTIVE SUMMARY / OnePager INFO OF STUDY</h1>
+                        <h2>Subtítulo</h2>
+                    </header>
+
+                    <div class="content-body">
+                        <p>Contenido</p>
+                    </div>
+                </div>
+                <div class="side grad-h"></div>
+                <footer>
+                    <p class="inv">INV Number: INVXXXXXXX</p>
+                    <p class="classified">Classified - Confidential</p>
+                    <p class="pagination">3</p>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="assets/js/pdf.js"></script>
+    <script src="assets/js/templates.js"></script>
+</body>
+
+</html>

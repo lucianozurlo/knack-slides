@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Mondelez</title>
+    <link rel="stylesheet" href="assets/css/mondelez.css">
+    <link rel="stylesheet" href="assets/css/pdf.css">
+</head>
+
+<body>
+    <button id="generate-pdf-btn">Generar PDF</button>
+
+    <div class="slides-container">
+
+        <!-- Slide 1 -->
+        <div class="slide-wrapper">
+            <div class="slide" id="slideFirst">
+                <div class="project-info">
+                    <h1>Oreo Glow Up CAT Screener – México Final report</h1>
+                    <h4>December, 2024</h4>
+                </div>
+                <img src="assets/img/knack-logo-blanco.png" class="logo-knack" alt="">
+                <div class="bg"></div>
+                <img src="assets/img/mondelez-bg.png" class="circle" alt="">
+            </div>
+        </div>
+
+        <!-- Slide Cover -->
+        <div class="slide-wrapper">
+            <div class="slide" id="slideCover">
+                <div class="cover">
+                    <div class="cover-content">
+                        <img src="assets/img/mondelez-bullet.png" class="bullet" alt="">
+                        <h1>Background</h1>
+                        <p>From Oreo CAS research, improvement opportunities to maximize OL in the core Oreo Regular
+                            product were identified. Prototypes were produced with changes in Flavor, Texture and
+                            Biscuit composition. From those prototypes, a clear winner will be selected to validate a
+                            better position in the market.</p>
+                    </div>
+                </div>
+                <img src="assets/img/mondelez-logo.png" class="footer" alt="">
+                <img src="assets/img/mondelez-frame.png" class="back" alt="">
+            </div>
+        </div>
+
+        <!-- Slide Content -->
+        <div class="slide-wrapper">
+            <div class="slide" id="slideContent">
+                <div class="main-content">
+                    <header>
+                        <h1>TITLE</h1>
+                    </header>
+
+                    <div class="content-body">
+                        <p>Question</p>
+                    </div>
+                </div>
+                <img src="assets/img/mondelez-logo.png" class="footer" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="assets/js/pdf.js"></script>
+    <script src="assets/js/templates.js"></script>
+</body>
+
+</html>

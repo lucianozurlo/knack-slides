@@ -1,0 +1,261 @@
+/* ================================================================= */
+/* FONTS */
+/* ================================================================= */
+@font-face {
+  font-family: "TCCC-UnityText";
+  src: url("../fonts/TCCC-UnityText/TCCC-UnityText-Bold.eot");
+  src:
+    url("../fonts/TCCC-UnityText/TCCC-UnityText-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/TCCC-UnityText/TCCC-UnityText-Bold.woff2") format("woff2"),
+    url("../fonts/TCCC-UnityText/TCCC-UnityText-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TCCC-UnityText";
+  src: url("../fonts/TCCC-UnityText/TCCC-UnityText-Medium.eot");
+  src:
+    url("../fonts/TCCC-UnityText/TCCC-UnityText-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/TCCC-UnityText/TCCC-UnityText-Medium.woff2") format("woff2"),
+    url("../fonts/TCCC-UnityText/TCCC-UnityText-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TCCC-UnityText";
+  src: url("../fonts/TCCC-UnityText/TCCC-UnityText-Regular.eot");
+  src:
+    url("../fonts/TCCC-UnityText/TCCC-UnityText-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/TCCC-UnityText/TCCC-UnityText-Regular.woff2") format("woff2"),
+    url("../fonts/TCCC-UnityText/TCCC-UnityText-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TCCC-UnityText";
+  src: url("../fonts/TCCC-UnityText/TCCC-UnityText-Light.eot");
+  src:
+    url("../fonts/TCCC-UnityText/TCCC-UnityText-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/TCCC-UnityText/TCCC-UnityText-Light.woff2") format("woff2"),
+    url("../fonts/TCCC-UnityText/TCCC-UnityText-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Calibri";
+  src: url("../fonts/Calibri/Calibri-BoldItalic.eot");
+  src:
+    url("../fonts/Calibri/Calibri-BoldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Calibri/Calibri-BoldItalic.woff2") format("woff2"),
+    url("../fonts/Calibri/Calibri-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Calibri";
+  src: url("../fonts/Calibri/Calibri.eot");
+  src:
+    url("../fonts/Calibri/Calibri.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Calibri/Calibri.woff2") format("woff2"),
+    url("../fonts/Calibri/Calibri.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Calibri";
+  src: url("../fonts/Calibri/Calibri-Italic.eot");
+  src:
+    url("../fonts/Calibri/Calibri-Italic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Calibri/Calibri-Italic.woff2") format("woff2"),
+    url("../fonts/Calibri/Calibri-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Calibri";
+  src: url("../fonts/Calibri/Calibri-Bold.eot");
+  src:
+    url("../fonts/Calibri/Calibri-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Calibri/Calibri-Bold.woff2") format("woff2"),
+    url("../fonts/Calibri/Calibri-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ================================================================= */
+/* BASE */
+/* ================================================================= */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  font-family: "TCCC-UnityText" !important;
+  letter-spacing: 0.005rem;
+  margin: 0;
+}
+
+.slides-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.slide-wrapper {
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.slide {
+  width: 1920px;
+  height: 1080px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  transform-origin: top left;
+}
+
+.slides-container .slide-wrapper .slide > *,
+.slides-container .slide-wrapper .slide > * > * {
+  position: absolute;
+}
+
+/* ================================================================= */
+/* KNACK SLIDES */
+/* ================================================================= */
+body {
+  font-family: "Calibri" !important;
+  letter-spacing: 0.005rem;
+}
+
+/* Slide First */
+#slideFirst {
+  background-color: #1372be;
+}
+
+#slideFirst .logo-knack {
+  width: 18.4%;
+  right: 2.15%;
+  top: 4.5%;
+}
+
+#slideFirst .project-info {
+  top: 36.8%;
+  left: 3.35%;
+  width: 80%;
+  height: 61%;
+}
+
+#slideFirst .project-info h1 {
+  width: 100%;
+  left: 0;
+  top: 0;
+  font-size: 6.72rem;
+  color: #fff;
+}
+
+#slideFirst .project-info table {
+  width: 100%;
+  left: 0.15%;
+  top: 60.3%;
+  font-family: "TCCC-UnityText" !important;
+  font-size: 1.85rem;
+  letter-spacing: 0.015rem;
+  color: #fff;
+}
+
+#slideFirst .project-info table td {
+  width: 50%;
+  padding-bottom: 0.92%;
+  letter-spacing: 0.005rem;
+}
+
+#slideFirst .project-info table td:first-child {
+  width: 10%;
+}
+
+/* Slide Content */
+#slideContent .main-content {
+  width: 93.1%;
+  height: 86.4%;
+  left: 5.9%;
+  top: 9.6%;
+  color: #7f7f7f;
+  font-family: "Calibri" !important;
+}
+
+#slideContent header h2 {
+  width: 100%;
+  left: 0;
+  top: 0;
+  font-family: "Calibri" !important;
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+#slideContent .content-body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 11%;
+  left: 0;
+}
+
+#slideContent .content-body p {
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 0 0 1rem;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5%;
+}
+
+footer .nota {
+  margin: 0;
+  left: 4.5%;
+  bottom: 33%;
+  font-size: 1.1rem;
+  letter-spacing: 0.01rem;
+  color: #7f7f7f;
+}
+
+footer img {
+  width: 8%;
+  bottom: 18%;
+  right: 0.8%;
+}

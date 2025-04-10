@@ -1,0 +1,307 @@
+/* ================================================================= */
+/* FONTS */
+/* ================================================================= */
+@font-face {
+  font-family: "MDLZ BITE TYPE";
+  src: url("../fonts/MDLZBITETYPE/MDLZBITETYPE-Regular.eot");
+  src:
+    url("../fonts/MDLZBITETYPE/MDLZBITETYPE-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/MDLZBITETYPE/MDLZBITETYPE-Regular.woff2") format("woff2"),
+    url("../fonts/MDLZBITETYPE/MDLZBITETYPE-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Calibri";
+  src: url("../fonts/Calibri/Calibri-BoldItalic.eot");
+  src:
+    url("../fonts/Calibri/Calibri-BoldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Calibri/Calibri-BoldItalic.woff2") format("woff2"),
+    url("../fonts/Calibri/Calibri-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Calibri";
+  src: url("../fonts/Calibri/Calibri.eot");
+  src:
+    url("../fonts/Calibri/Calibri.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Calibri/Calibri.woff2") format("woff2"),
+    url("../fonts/Calibri/Calibri.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Calibri";
+  src: url("../fonts/Calibri/Calibri-Italic.eot");
+  src:
+    url("../fonts/Calibri/Calibri-Italic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Calibri/Calibri-Italic.woff2") format("woff2"),
+    url("../fonts/Calibri/Calibri-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Calibri";
+  src: url("../fonts/Calibri/Calibri-Bold.eot");
+  src:
+    url("../fonts/Calibri/Calibri-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Calibri/Calibri-Bold.woff2") format("woff2"),
+    url("../fonts/Calibri/Calibri-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ================================================================= */
+/* BASE */
+/* ================================================================= */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eee;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  margin: 0;
+}
+
+.slides-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.slide-wrapper {
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.slide {
+  width: 1920px;
+  height: 1080px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  transform-origin: top left;
+}
+
+.slides-container .slide-wrapper .slide > *,
+.slides-container .slide-wrapper .slide > * > * {
+  position: absolute;
+  z-index: 3;
+}
+
+/* ================================================================= */
+/* MONDELEZ SLIDES */
+/* ================================================================= */
+body {
+  font-family: "MDLZ BITE TYPE" !important;
+  letter-spacing: 0.005rem;
+}
+
+.main-content {
+  width: 95%;
+  height: 86%;
+  top: 4.6%;
+  left: 3.1%;
+  padding: 0;
+}
+
+.main-content header,
+.main-content header > * {
+  margin: 0;
+  width: 100%;
+}
+
+.main-content header h1 {
+  font-size: 2.93rem;
+  margin-bottom: 0.2rem;
+}
+
+.main-content header h2 {
+  font-size: 2.1rem;
+  color: #f40009;
+}
+
+.main-content .content-body {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+}
+
+.main-content .content-body p {
+  font-size: 2.1rem;
+  margin: 0 0 5rem 0;
+}
+
+img.footer {
+  width: 11%;
+  height: 7.4%;
+  right: 3.2%;
+  bottom: 3.5%;
+}
+
+/* Slide First */
+#slideFirst .logo-mondelez {
+  width: 24.8%;
+  left: 2.15%;
+  top: 3.5%;
+}
+
+#slideFirst .logo-knack {
+  width: 18.4%;
+  left: 1.55%;
+  bottom: 2.85%;
+}
+
+#slideFirst .project-info {
+  top: 35.8%;
+  left: 2.25%;
+  width: 35%;
+  height: 61%;
+}
+
+#slideFirst .project-info h1 {
+  width: 100%;
+  left: 0;
+  top: 0;
+  font-size: 5.04rem;
+  line-height: 97%;
+  color: #fff;
+}
+
+#slideFirst .project-info h4 {
+  width: 100%;
+  left: 0;
+  top: 38%;
+  font-size: 3.5rem;
+  line-height: 96%;
+  color: #957aa9;
+}
+
+#slideFirst .circle {
+  width: 46.5%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+#slideFirst .bg {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-image: url("../img/mondelez-img.png");
+  z-index: 0;
+}
+
+/* Slide Cover */
+#slideCover .cover {
+  width: 100%;
+  height: 100%;
+}
+
+#slideCover .cover-content {
+  width: 85%;
+  height: 85%;
+  left: 4%;
+  top: 7.5%;
+}
+
+#slideCover .cover .cover-content h1 {
+  position: absolute;
+  font-size: 3.95rem;
+  left: 4.35%;
+  letter-spacing: 0.05rem;
+  color: #4e256f;
+}
+
+#slideCover .cover .cover-content p {
+  position: absolute;
+  top: 10.25%;
+  width: 100%;
+  height: 100%;
+  margin: 0 0 1rem;
+  font-family: "Calibri" !important;
+  font-size: 2.25rem;
+  font-weight: 400;
+  letter-spacing: 0.005rem;
+  color: #666666;
+}
+
+#slideCover .cover .cover-content .bullet {
+  position: absolute;
+  width: 2.65%;
+  left: 0.15%;
+  top: 2.5%;
+}
+
+/* Slide Content */
+#slideContent .main-content {
+  width: 100%;
+  height: 100%;
+}
+
+#slideContent .main-content header {
+  width: 89.8%;
+  height: 8.64%;
+  border-bottom: 0.45rem solid #4e256f;
+}
+
+#slideContent .main-content {
+  width: 95.5%;
+  height: 93%;
+  left: 1.25%;
+  top: 3.3%;
+}
+
+#slideContent .main-content h1 {
+  position: absolute;
+  font-size: 4rem;
+  margin-bottom: 0.2rem;
+  left: 1.45%;
+  color: #4e256f;
+}
+
+#slideContent .main-content p {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 0 1rem;
+  font-family: "Calibri" !important;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.005rem;
+  color: #4e256f;
+}
+
+#slideContent .main-content .content-body {
+  width: 98%;
+  height: 87%;
+  top: 11.15%;
+  left: 0.8%;
+}

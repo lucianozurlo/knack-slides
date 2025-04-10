@@ -1,0 +1,19 @@
+.slides-container {
+  width: 1920px;
+  margin: 20px auto;
+}
+
+.slide-wrapper {
+  width: 1920px;
+  height: 1080px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#generate-pdf-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
